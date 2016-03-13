@@ -5,3 +5,4 @@ def calc(n1,n2):
     tot=n1+n2
     return tot
 print(calc(n1,n2))
+print("la puta madre!!!!")
