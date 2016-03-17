@@ -5,15 +5,28 @@ def menu_profes():
 def logup():
     print("""Digite el tipo de cuenta que va a crear
                                                     1. Estudiante
-                                                    2. Profesor""")
-    tipo=int(input("Digite el tipo de cuenta que va a crear"))
-    carne=int(input("Digite el número de carnet."))
+                                                    2. Profesor
+                                                    3. Volver al menú principal""")
+    tipo=input("Digite la opción deseada")
+    if tipo=="1":
+        carne=(input("Digite el número de carnet."))
+    elif tipo=="2":
+        carne=input("Digite el número de cédula.")
+    elif tipo=="3":
+        menu_principal()
+    else:
+        print("Error, mamador")
+        logup()
     name=input("Digite su nombre completo.")
     mail=input("Digite su correo electrónico.")
     contra=input("Digite la contraseña que desea utilizar.")
 
     usuarios=[]
     usuarios.append([carne,name,mail,contra,tipo])
+    estudiantes={}
+
+    #falta recorrer la lista
+    estudiantes[carne]={}
     print("El proceso de registro se realizó correctamente.")
     menu_principal()
     return usuarios
