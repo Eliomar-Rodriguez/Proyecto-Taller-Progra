@@ -23,8 +23,6 @@ def menu_profes():
     print("")
 
 
-
-
 def logup():
     print("""Digite el tipo de cuenta que va a crear
                                                     1. Estudiante
@@ -54,6 +52,7 @@ def logup():
     menu_principal()
     return usuarios
 
+
 def login(usuarios): ################################### PENDIENTE  ##################################
     user=input("Digite su usuario")
     password=input("Digite la contraseña")
@@ -61,6 +60,7 @@ def login(usuarios): ################################### PENDIENTE  ############
     j=0
     if user==usuarios[i][0] and password==usuarios[i][3]:
         print("correcto")
+
 
 def menu_principal():
     print("""                 Menú de inico de sesión
@@ -78,7 +78,9 @@ def menu_principal():
     else:
         print("Error en los datos, debe de digitar una opción válida.")
 
+
 def menu_estudiantes():
     print("")
+
 
 menu_principal()
