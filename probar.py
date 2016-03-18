@@ -1,24 +1,22 @@
-def logo():
-    print("""
-        *
-        *
-        *
-  * * * * * * *          *                   *  *
-        *            *       *            *          *
-        *          *  * * * *  *        *
-        *         *                     *
-        *          *           *          *          *
-        *            *  *   *                *   *
-        """)
+estudiantes_y_profes=[{"nombre":"Vera Gamboa","Correo":"vgamboa@itcr.ac.cr","pass":"vgamboa","id":"309870123","tipo":"2"},
+                      {"nombre":"Diego Rojas","correo":"drojas@itcr.ac.cr","pass":"drojas","id":"109870654","tipo":"2"},
+                      {"nombre":"Eladio Cruz","correo":"ecruz@itcr.ac.cr","pass":"ecruz","id":"207650987","tipo":"2"},
+                      {"nombre":"Diego Mora","correo":"dmora@itcr.ac.cr","pass":"dmora","id":"701230234","tipo":"2"},
+                      {"nombre":"Steven Peraza","correo":"stevenperaza@gmail.com","pass":"stevenperaza","id":"206540123","tipo":"1"},
+                      {"nombre":"Kembly Salazar","correo":"kemsalazar@gmail.com","pass":"kemsalazar","id":"107480961","tipo":"1"},
+                      {"nombre":"Juan Mora","correo":"jmora@hotmail.com","pass":"jmora123","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"}]#Estudiantes y profesores
 
-print("""Digite el tipo de cuenta que va a crear
-                                                    1. Estudiante
-                                                    2. Profesor""")
-tipo=int(input("Digite el tipo de cuenta que va a crear"))
-carne=int(input("Digite el número de carnet."))
-name=input("Digite su nombre completo.")
-mail=int(input("Digite su correo electrónico."))
-contra=int(input("Digite la contraseña que desea utilizar."))
-
-usuarios=[]
-usuarios.append([carne,name,mail,contra]) #listo
+def login():

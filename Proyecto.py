@@ -1,5 +1,28 @@
+estudiantes_y_profes=[{"nombre":"Vera Gamboa","Correo":"vgamboa@itcr.ac.cr","pass":"vgamboa","id":"309870123","tipo":"2"},
+                      {"nombre":"Diego Rojas","correo":"drojas@itcr.ac.cr","pass":"drojas","id":"109870654","tipo":"2"},
+                      {"nombre":"Eladio Cruz","correo":"ecruz@itcr.ac.cr","pass":"ecruz","id":"207650987","tipo":"2"},
+                      {"nombre":"Diego Mora","correo":"dmora@itcr.ac.cr","pass":"dmora","id":"701230234","tipo":"2"},
+                      {"nombre":"Steven Peraza","correo":"stevenperaza@gmail.com","pass":"stevenperaza","id":"2016112209","tipo":"1"},
+                      {"nombre":"Kembly Salazar","correo":"kemsalazar@gmail.com","pass":"kemsalazar","id":"2016402331","tipo":"1"},
+                      {"nombre":"Juan Mora","correo":"jmora@hotmail.com","pass":"jmora123","id":"2010198009","tipo":"1"},
+                      {"nombre":"Gabriel Martinez","correo":"gmartinez@estudiantec.cr","pass":"gmatinez","id":"2013443216","tipo":"1"},
+                      {"nombre":"Juan Rafael Morales","correo":"jrmorales@hotmail.com","pass":"jrmorales96","id":"2014772139","tipo":"1"},
+                      {"nombre":"Carlos Morera","correo":"cmorera21@gmail.com","pass":"cmorera","id":"2009123456","tipo":"1"},
+                      {"nombre":"Eliomar Rodríguez","correo":"rodriguez.elio.97@gmail.com","pass":"Capitan1","id":"2016108660","tipo":"1"},
+                      {"nombre":"Angelo Medina","correo":"amedina@estudiantec.cr","pass":"amedina","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
+                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"}]#Estudiantes y profesores
+
 def menu_profes():
     print("")
+
+
 
 
 def logup():
