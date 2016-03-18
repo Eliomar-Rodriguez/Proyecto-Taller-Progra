@@ -9,15 +9,15 @@ estudiantes_y_profes=[{"nombre":"Vera Gamboa","Correo":"vgamboa@itcr.ac.cr","pas
                       {"nombre":"Juan Rafael Morales","correo":"jrmorales@hotmail.com","pass":"jrmorales96","id":"2014772139","tipo":"1"},
                       {"nombre":"Carlos Morera","correo":"cmorera21@gmail.com","pass":"cmorera","id":"2009123456","tipo":"1"},
                       {"nombre":"Eliomar Rodríguez","correo":"rodriguez.elio.97@gmail.com","pass":"Capitan1","id":"2016108660","tipo":"1"},
-                      {"nombre":"Angelo Medina","correo":"amedina@estudiantec.cr","pass":"amedina","id":"","tipo":"1"},
-                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
-                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
-                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
-                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
-                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
-                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
-                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"},
-                      {"nombre":"","correo":"","pass":"","id":"","tipo":"1"}]#Estudiantes y profesores
+                      {"nombre":"Angelo Medina","correo":"amedina@estudiantec.cr","pass":"amedina","id":"2016109990","tipo":"1"},
+                      {"nombre":"Juan Primito Rivas","correo":"jprivas@gmail.com","pass":"jprivas","id":"2015012349","tipo":"1"},
+                      {"nombre":"Jafeth Salas","correo":"jafsal97@gmail.com","pass":"Jafsal123","id":"2016421763","tipo":"1"},
+                      {"nombre":"Carlos Restrepo Marín","correo":"crmarin21","pass":"","id":"","tipo":"1"},
+                      {"nombre":"Antonio Rodríguez Arguedas","correo":"antonio16--2012@hotmail.com","pass":"Capitan123","id":"2016108661","tipo":"1"},
+                      {"nombre":"Angelo Aguilar","correo":"angelomix@gmail.com","pass":"mixmix1","id":"2011152364","tipo":"1"},
+                      {"nombre":"Josue Chaves","correo":"jchaves@gmail.com","pass":"jchaves","id":"2009887512","tipo":"1"},
+                      {"nombre":"Joshua Ramirez","correo":"jramirez4223@gmail.com","pass":"lolita123","id":"2014723912","tipo":"1"},
+                      {"nombre":"Dere Solorzano","correo":"dsolorsano97@gmail.com","pass":"matediscreta</3","id":"2014334523","tipo":"1"}]#Estudiantes y profesores
 
 def menu_profes():
     print("")
