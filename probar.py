@@ -18,8 +18,8 @@ estudiantes_y_profes=[{"nombre":"Vera Gamboa","Correo":"vgamboa@itcr.ac.cr","pas
                       {"nombre":"Josue Chaves","correo":"jchaves@gmail.com","pass":"jchaves","id":"2009887512","tipo":"1"},
                       {"nombre":"Joshua Ramirez","correo":"jramirez4223@gmail.com","pass":"lolita123","id":"2014723912","tipo":"1"},
                       {"nombre":"Dere Solorzano","correo":"dsolorsano97@gmail.com","pass":"matediscreta</3","id":"2014334523","tipo":"1"}]#Estudiantes y profesores
-def menu_estud():
-    print("estu")
+def menu_estud(x):
+    print("Bienvenido ",x)
 
 def menu_profes(x):
     print("Bienvenido ",x)
@@ -30,7 +30,8 @@ def login():
     for i in  range (0,len(estudiantes_y_profes)):
         if ide==estudiantes_y_profes[i]["id"] and passw==estudiantes_y_profes[i]["pass"]:
             if estudiantes_y_profes[i]["tipo"]=="1":
-                return menu_estud()
+                x=estudiantes_y_profes[i]["nombre"]
+                return menu_estud(x)
             elif estudiantes_y_profes[i]["tipo"]=="2":
                 x=estudiantes_y_profes[i]["nombre"]
                 return menu_profes(x)

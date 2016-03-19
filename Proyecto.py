@@ -17,23 +17,11 @@ estudiantes_y_profes=[{"nombre":"Vera Gamboa","Correo":"vgamboa@itcr.ac.cr","pas
                       {"nombre":"Angelo Aguilar","correo":"angelomix@gmail.com","pass":"mixmix1","id":"2011152364","tipo":"1"},
                       {"nombre":"Josue Chaves","correo":"jchaves@gmail.com","pass":"jchaves","id":"2009887512","tipo":"1"},
                       {"nombre":"Joshua Ramirez","correo":"jramirez4223@gmail.com","pass":"lolita123","id":"2014723912","tipo":"1"},
-                      {"nombre":"Dere Solorzano","correo":"dsolorsano97@gmail.com","pass":"matediscreta</3","id":"2014334523","tipo":"1"}]#Estudiantes y profesores
+                      {"nombre":"Dere Solorzano","correo":"dsolorsano97@gmail.com","pass":"matediscreta","id":"2014334523","tipo":"1"}]#Estudiantes y profesores
 
 def menu_profes(x):
     print("Bienvenido ",x)
 
-
-def login():
-    ide=input("Digite su identificación.")
-    passw=input("Digite su contraseña")
-    for i in  range (0,len(estudiantes_y_profes)):
-        if ide==estudiantes_y_profes[i]["id"] and passw==estudiantes_y_profes[i]["pass"]:
-            if estudiantes_y_profes[i]["tipo"]=="1":
-                return menu_estudiantes()
-            elif estudiantes_y_profes[i]["tipo"]=="2":
-                x=estudiantes_y_profes[i]["nombre"]
-                return menu_profes(x)
-    print("Datos no validos, intentalo nuevamente.")
 
 def logup():
     print("""Digite el tipo de cuenta que va a crear
@@ -65,15 +53,6 @@ def logup():
     return usuarios
 
 
-def login(usuarios): ################################### PENDIENTE  ##################################
-    user=input("Digite su usuario")
-    password=input("Digite la contraseña")
-    i=0
-    j=0
-    if user==usuarios[i][0] and password==usuarios[i][3]:
-        print("correcto")
-
-
 def menu_principal():
     print("""                 Menú de inico de sesión
                     1. Iniciar sesión.
@@ -91,8 +70,22 @@ def menu_principal():
         print("Error en los datos, debe de digitar una opción válida.")
 
 
-def menu_estudiantes():
-    print("")
+def menu_estudiantes(x):
+    print("Bienvenido ",x)
 
+
+def login():
+    print("______________________________")
+    ide=input("Digite su identificación.")
+    passw=input("Digite su contraseña")
+    for i in  range (0,len(estudiantes_y_profes)):
+        if ide==estudiantes_y_profes[i]["id"] and passw==estudiantes_y_profes[i]["pass"]:
+            if estudiantes_y_profes[i]["tipo"]=="1":
+                x=estudiantes_y_profes[i]["nombre"]
+                return menu_estudiantes(x)
+            elif estudiantes_y_profes[i]["tipo"]=="2":
+                x=estudiantes_y_profes[i]["nombre"]
+                return menu_profes(x)
+    print("Datos no validos, intentalo nuevamente.")
 
 menu_principal()
