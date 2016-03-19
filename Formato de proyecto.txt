@@ -1,0 +1,71 @@
+1. inicio de sesion
+	menu profesores
+		1. cursos
+			    1. crear curso (codigo de curso, id del profe, nombre de curso, cantidad de creditos)
+			    2. modificar curso (solicitar codigo de curso para ver existe y si existe editar los distintos campos mediante opciones 
+			          1. codigo del curso 
+			          2. id del profe 
+			          3. nombre 
+			          4. cantidad de creditos)
+			    3. eliminar curso (indicando su codigo, si hay estudiantes no se puede eliminar)
+		2. estudiantes
+			    1. incluir estudiante (carne, nombre, email, telefono,carrera)
+			    2.eliminar (numero de carnet a eliminar)
+		3. evaluaciones
+			1. agregar evaluaciones
+			 	primero el curso
+				luego el nombre de la evaluacion
+				porcentaje(1-100%) que equivale a la nota final)
+				___________
+				EJEMPLO
+				___________
+
+				CURSO ####
+				1.proyectos 	20%
+				2.examenes	20%
+				3.pruebas costas	20%
+				4.tareas		20%
+				5.otros		20%
+				_______________________
+						100%
+				si las evaluaciones agregadas no llegan al 100% avisar
+			2. modificar evaluaciones
+				1.agregar notas	
+					digite codigo de curso
+					elegir la evaluacion
+					lista de estudiantes
+				2. modificar notas
+					digite codigo de curso
+					elegir la evaluacion
+					lista de estudiantes
+				modificar notas en cualquier evaluacion de cualquier estudiante
+			3. eliminar evaluaciones
+		4. consultas
+			1. ver lista de estudiantes (carne, nombre, email, telefono, carrera)
+			2. ver la lista de cursos (codigo, nombre, profesor)
+			3. estadistica de un curso (ingresa el codigo_del_curso)
+				*Estudiantes matriculados (nombre, carnet)
+				*Nota promedio
+				*Nota promedio en cada rubro
+				*Lista de estudiantes del curso con el desglose total en cada uno de sus rubros y su nota final
+			4. estadisticas de estudiantes(ingresa el carne)
+				*cursos matriculados con el profesor
+					si tiene varios cursos, ingreso el codigo del curso y muestra en detalle las notas de ese estudiante en ese curso
+		5. salir del sistema
+	menu estudiantes
+		1. Ver cursos
+			lista de cursos en los que esta matriculado
+				dentro de cada curso debe de aparecer la notas obtenidas en cada una de las evaluaciones y tambien la nota final
+		2. Matricular
+			1. matricular curso
+			2. desmatricular curso
+		3. Consultas
+			1. lista de cursos matriculados
+			2. lista de cursos a matricular
+			3. lista de cursos aprovados (código de curso, nombre curso y nota)
+			4. lista de cursos reprobados (código de curso, nombre curso y nota)
+			5. estudio curricular: código de curso, nombre de curso, situación (en curso, no ha sido aprovada, aprovada)
+		4. Salir
+		
+2. crear cuenta
+3. salir
