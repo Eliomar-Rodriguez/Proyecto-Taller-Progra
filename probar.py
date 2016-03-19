@@ -12,24 +12,28 @@ estudiantes_y_profes=[{"nombre":"Vera Gamboa","Correo":"vgamboa@itcr.ac.cr","pas
                       {"nombre":"Angelo Medina","correo":"amedina@estudiantec.cr","pass":"amedina","id":"2016109990","tipo":"1"},
                       {"nombre":"Juan Primito Rivas","correo":"jprivas@gmail.com","pass":"jprivas","id":"2015012349","tipo":"1"},
                       {"nombre":"Jafeth Salas","correo":"jafsal97@gmail.com","pass":"Jafsal123","id":"2016421763","tipo":"1"},
-                      {"nombre":"Carlos Restrepo Marín","correo":"crmarin21","pass":"","id":"","tipo":"1"},
+                      {"nombre":"Carlos Restrepo Marín","correo":"crmarin21@gmail.com","pass":"","id":"","tipo":"1"},
                       {"nombre":"Antonio Rodríguez Arguedas","correo":"antonio16--2012@hotmail.com","pass":"Capitan123","id":"2016108661","tipo":"1"},
                       {"nombre":"Angelo Aguilar","correo":"angelomix@gmail.com","pass":"mixmix1","id":"2011152364","tipo":"1"},
                       {"nombre":"Josue Chaves","correo":"jchaves@gmail.com","pass":"jchaves","id":"2009887512","tipo":"1"},
                       {"nombre":"Joshua Ramirez","correo":"jramirez4223@gmail.com","pass":"lolita123","id":"2014723912","tipo":"1"},
                       {"nombre":"Dere Solorzano","correo":"dsolorsano97@gmail.com","pass":"matediscreta</3","id":"2014334523","tipo":"1"}]#Estudiantes y profesores
+def menu_estud():
+    print("estu")
+
+def menu_profes(x):
+    print("Bienvenido ",x)
 
 def login():
-    ide=input("Digite su identificación, carnet si es estudiante y cedula si es profesor.")
+    ide=input("Digite su identificación.")
     passw=input("Digite su contraseña")
     for i in  range (0,len(estudiantes_y_profes)):
         if ide==estudiantes_y_profes[i]["id"] and passw==estudiantes_y_profes[i]["pass"]:
-            if estudiantes_y_profes[i]["tipo"]==1:
-                print("Menu estudiantes")
-            else:
-                print("Menu profes")
-            #print("Login correcto")
-            return # menu.....
-    print("nada")
+            if estudiantes_y_profes[i]["tipo"]=="1":
+                return menu_estud()
+            elif estudiantes_y_profes[i]["tipo"]=="2":
+                x=estudiantes_y_profes[i]["nombre"]
+                return menu_profes(x)
+    print("Datos no validos, intentalo nuevamente.")
 
 login()
