@@ -36,13 +36,23 @@ def logup():
     tipo=input("""Digite la opción deseada
 """)
     if tipo=="1":
-        carne=(input("Digite el número de carnet."))
+        carne1=(input("Digite el número de carnet."))
+        if carne1.isdigit():
+            carne=carne1
+        else:
+            print("\nEl número de carnet debe de contener únicamente números, inténtalo nuevamente.\n")
+            logup()
     elif tipo=="2":
-        carne=input("Digite el número de cédula.")
+        carne1=input("Digite el número de cédula.")
+        if carne1.isdigit():
+            carne=carne1
+        else:
+            print("\nEl número de cédula debe de contener únicamente números, inténtalo nuevamente.\n")
+            logup()
     elif tipo=="3":
         menu_principal()
     else:
-        print("Error, inténtalo nuevamente.")
+        print("Error en los datos, inténtalo nuevamente.")
         logup()
     name=input("Digite su nombre completo.")
     mail=input("Digite su correo electrónico.")
@@ -58,9 +68,8 @@ def logup():
         """)
         carrera=input("Digite la opción de su carrera.")
         estudiantes_y_profes.append({"nombre":name,"correo":mail,"pass":contra,"id":carne,"tipo":tipo,"carrera":carrera})
-    else:
-        print("Error en los datos, inténtalo nuevamente.")
-    estudiantes_y_profes.append({"nombre":name,"correo":mail,"pass":contra,"id":carne,"tipo":tipo})
+    elif tipo=="2":
+        estudiantes_y_profes.append({"nombre":name,"correo":mail,"pass":contra,"id":carne,"tipo":tipo})
     print("El proceso de registro se realizó correctamente.")
     menu_principal()
     return
@@ -102,5 +111,6 @@ def login():
                 x=estudiantes_y_profes[i]["nombre"]
                 return menu_profes(x)
     print("Datos no validos, intentalo nuevamente.")
+    login()
 
 menu_principal()
