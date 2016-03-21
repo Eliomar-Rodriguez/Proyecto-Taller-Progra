@@ -33,7 +33,8 @@ def logup():
                                                     1. Estudiante
                                                     2. Profesor
                                                     3. Volver al menú principal""")
-    tipo=input("Digite la opción deseada")
+    tipo=input("""Digite la opción deseada
+""")
     if tipo=="1":
         carne=(input("Digite el número de carnet."))
     elif tipo=="2":
@@ -56,11 +57,10 @@ def logup():
         5. Administración de Empresas
         """)
         carrera=input("Digite la opción de su carrera.")
+        estudiantes_y_profes.append({"nombre":name,"correo":mail,"pass":contra,"id":carne,"tipo":tipo,"carrera":carrera})
     else:
         print("Error en los datos, inténtalo nuevamente.")
-
-
-    estudiantes_y_profes.append({"nombre":name,"correo":mail,"pass":contra,"id":carne,"tipo":tipo,"carrera":carrera})
+    estudiantes_y_profes.append({"nombre":name,"correo":mail,"pass":contra,"id":carne,"tipo":tipo})
     print("El proceso de registro se realizó correctamente.")
     menu_principal()
     return
@@ -72,7 +72,8 @@ def menu_principal():
                     2. Crear Cuenta.
                     3. Salir
     """)
-    op=(input("Digite la opción a elegir."))
+    op=(input("""Digite la opción a elegir.
+"""))
     if op=="1":
         login()
     elif op=="2":
