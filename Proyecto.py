@@ -24,7 +24,7 @@ estudiantes_y_profes=[{"nombre":"Vera Gamboa","Correo":"vgamboa@itcr.ac.cr","pas
                       {"nombre":"Silvia Fulopp Patiño","correo":"silfupat48@gmail.com","pass":"gatoconrabia123","id":"2014234667","tipo":"1","carrera":"4"},
                       {"nombre":"Carlos Restrepo Marín","correo":"cremarin@estudiantec.cr","pass":"carritoazul297","id":"2009176889","tipo":"1","carrera":"5"},]#Estudiantes y profesores
 
-cursos=[{"codigo":"123","nombre_curso":"Discreta","evaluaciones":{}},{"codigo":"111","nombre_curso":"General","evaluaciones":{}}]
+cursos=[{"codigo":"123","nombre_curso":"Discreta"},{"codigo":"111","nombre_curso":"General"}]
 
 
 #de prueba
@@ -35,6 +35,20 @@ def menu_profes(x):
     3.Evaluaciones
     4.Consultas
     5.Cerrar Sesión""")
+    op=input("Digite la opción que desea.  ")
+    if op=="1":
+        print("Retornar a cursos con la x por si necesito enviarlo al menu de profes")#falta agregar cursos
+    elif op=="2":
+        print("Retornar a estudiantes con la x por si necesito enviarlo al menu de profes") #falta agregar estudiantes
+    elif op=="3":
+        return menu_evaluaciones(x)
+    elif op=="4":
+        print("Retornar a consultas con la x por si necesito enviarlo al menu de profes")
+    elif op=="5":
+        menu_principal()
+    else:
+        print("Debe digitar datos válidos.")
+        menu_profes(x)
 
 
 
@@ -144,8 +158,7 @@ def login():
 
 
 #agregar evaluaciones en proceso
-def add_evaluations():
-    x=0
+def add_evaluations(x):
     code_course=input("Digite el código del curso. ")
     for i in cursos:
         if code_course ==i["codigo"]:
@@ -153,13 +166,13 @@ def add_evaluations():
             print("-  Evaluaciones predeterminadas  -")
             print("----------------------------------")
             print("""
-        1.Tarea
-        2.Proyecto
-        3.Exámen
-        4.Prueba Corta
-        5.Quiz
-        6.Laboratorio
-        7.Otro
+         1.Tarea
+         2.Proyecto
+         3.Exámen
+         4.Prueba Corta
+         5.Quiz
+         6.Laboratorio
+         7.Otro
             """)
             resp=input("Digite la opción de la evaluación que desea crear. ")
             if resp=="1":
@@ -178,20 +191,34 @@ def add_evaluations():
                 name_eval=input("Digite el nombre de la evaluación que desea crear.  ")
             else:
                 print("Error en los datos, inténtalo nuevamente.")
-                add_evaluations()
-            porcantaje=input("Digite el procenteje que la va a asignar a ésta evaluación, de 0% a 100%  ")
-            #for q in cursos:
-             #   for i in q:
-              #      print(i)
-                    #x+=i
-            #print("Por el momento el porcentaje asignado es de",x)
-            for j in cursos:
-                for evaluaciones in j:
-                    evaluaciones[name_eval]=porcantaje
-
+                add_evaluations(x)
+            porcantaje=int(input("Digite el procenteje que la va a asignar a ésta evaluación, de 0% a 100%  "))
+            print(cursos)
+            p=name_eval
+            for q in cursos:
+                if name_eval in q:
+                    print("La evaluación seleccionada ya se encuentra creada, inténtalo nuevamente.")
+                    add_evaluations(x)
+                else:
+                    for j in cursos:
+                        for code_course in j:
+                            if code_course in j["codigo"]:
+                                j[name_eval]=porcantaje
+                                print(cursos)
+                                print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
+                                opc=input("""   ¿Desea agregar otra evaluación?     1.Si
+                                       2.No
+                                       """)
+                                print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
+                                if opc=="1":
+                                    add_evaluations(x)
+                                elif opc=="2":
+                                    menu_profes(x)
+                                else:
+                                    print("Debe digitar datos válidos.")
+                                    menu_profes(x)
     print("El código que ingresó del curso no existe, inténtalo nuevamente.")
-    add_evaluations()
-
+    add_evaluations(x)
 
 
 #en proceso
@@ -206,31 +233,33 @@ def del_evaluations():
 
 
 #menu de evaluaciones listo
-def menu_evaluaciones():
+def menu_evaluaciones(x):
     print("----------------------------------")
     print("-------|   Evaluaciones   |-------")
     print("----------------------------------")
     op=input("""-   1. Agregar evaluaciones      -
 -   2. Modificar evaluaciones    -
 -   3. Eliminar evaluaciones     -
--   4. Menú principal
+-   4. Menú de profesores
 -    """)
     if op.isdigit():
         if op=="1":
-            add_evaluations()
+            return add_evaluations(x)
         elif op=="2":
-            edit_evaluations()
+            return edit_evaluations(x)
         elif op=="3":
-            del_evaluations()
+            return del_evaluations(x)
         elif op=="4":
-            menu_principal()
+            return menu_profes(x)
         else:
             print("\n__________________________________")
             print(">>Debe de digitar datos válidos.<<")
             print("__________________________________\n")
-            menu_evaluaciones()
+            menu_evaluaciones(x)
     else:
         print("\n__________________________________")
         print(">>Debe de digitar datos válidos.<<")
         print("__________________________________\n")
-        menu_evaluaciones()
+        menu_evaluaciones(x)
+
+login()
