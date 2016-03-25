@@ -24,15 +24,32 @@ estudiantes_y_profes=[{"nombre":"Vera Gamboa","Correo":"vgamboa@itcr.ac.cr","pas
                       {"nombre":"Silvia Fulopp Patiño","correo":"silfupat48@gmail.com","pass":"gatoconrabia123","id":"2014234667","tipo":"1","carrera":"4"},
                       {"nombre":"Carlos Restrepo Marín","correo":"cremarin@estudiantec.cr","pass":"carritoazul297","id":"2009176889","tipo":"1","carrera":"5"},]#Estudiantes y profesores
 
+cursos=[{"codigo":"123","nombre_curso":"Discreta","evaluaciones":{}},{"codigo":"111","nombre_curso":"General","evaluaciones":{}}]
+
+
+#de prueba
 def menu_profes(x):
     print("Bienvenido ",x)
+    print("""1.Cursos
+    2.Estudiantes
+    3.Evaluaciones
+    4.Consultas
+    5.Cerrar Sesión""")
+
+
+
+#de prueba
+def menu_estudiantes(x):
+    print("Bienvenido ",x)
+
+
 
 #logup totalmente listo
 def logup():
     print("""Digite el tipo de cuenta que va a crear
-                                                    1. Estudiante
-                                                    2. Profesor
-                                                    3. Volver al menú principal""")
+                                                1. Estudiante
+                                                2. Profesor
+                                                3. Volver al menú principal""")
     tipo=input("""Digite la opción deseada
 """)
     if tipo=="1":
@@ -75,14 +92,23 @@ def logup():
     return
 
 
+
+#menú principal totalmente listo
 def menu_principal():
-    print("""                 Menú de inico de sesión
-                    1. Iniciar sesión.
-                    2. Crear Cuenta.
-                    3. Salir
-    """)
-    op=(input("""Digite la opción a elegir.
-"""))
+    print("  _ _ _   _ _ _   _ _ _        _ _ _     _ _    _ _ _     _ _   _ _ _     _       |")
+    print("    |    |       |            |      -    |   _       -    |      |     _   _     |")
+    print("    |    | _     |            |       -   |   _   _ _ _    |      |    _     _    |")
+    print("    |    |       |            |       -   |   _        -   |      |   _  _ _  _   |")
+    print("    |    |_ _ _  |_ _ _       |_ _ _ -   _|_    _  _  -   _|_     |  _         _  |_ _ _")
+
+    print("\t\t\t\t\t\t_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
+    print("""\t\t\t\t\t   |       1. Iniciar sesión.      |
+\t\t\t\t\t   |       2. Crear Cuenta.        |
+\t\t\t\t\t   |       3. Salir                |
+\t\t\t\t\t   |_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|""")
+    op=(input("""\t\t\t\t\t   | Digite la opción a elegir.    |
+                       |       """))
+    print("\t\t\t\t\t   |_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|\n")
     if op=="1":
         login()
     elif op=="2":
@@ -90,18 +116,19 @@ def menu_principal():
     elif op=="3":
         quit()
     else:
-        print("\nError en los datos, debe de digitar una opción válida.\n")
+        print("\n _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
+        print("|     Error en los datos, debe de digitar una opción válida.    |")
+        print("|_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|\n")
         menu_principal()
 
 
-def menu_estudiantes(x):
-    print("Bienvenido ",x)
 
-
+#login totalmente listo
 def login():
-    print("______________________________")
-    ide=input("Digite su identificación.")
-    passw=input("Digite su contraseña")
+    print(" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
+    ide=input("| Digite su identificación.    ")
+    passw=input("| Digite su contraseña.        ")
+    print("|_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|\n")
     for i in  range (0,len(estudiantes_y_profes)):
         if ide==estudiantes_y_profes[i]["id"] and passw==estudiantes_y_profes[i]["pass"]:
             if estudiantes_y_profes[i]["tipo"]=="1":
@@ -110,7 +137,100 @@ def login():
             elif estudiantes_y_profes[i]["tipo"]=="2":
                 x=estudiantes_y_profes[i]["nombre"]
                 return menu_profes(x)
-    print("Datos no validos, intentalo nuevamente.")
+    print(" Datos no válidos, inténtalo nuevamente.\n")
+
     login()
 
-menu_principal()
+
+
+#agregar evaluaciones en proceso
+def add_evaluations():
+    x=0
+    code_course=input("Digite el código del curso. ")
+    for i in cursos:
+        if code_course ==i["codigo"]:
+            print("----------------------------------")
+            print("-  Evaluaciones predeterminadas  -")
+            print("----------------------------------")
+            print("""
+        1.Tarea
+        2.Proyecto
+        3.Exámen
+        4.Prueba Corta
+        5.Quiz
+        6.Laboratorio
+        7.Otro
+            """)
+            resp=input("Digite la opción de la evaluación que desea crear. ")
+            if resp=="1":
+                name_eval="porc_tarea"
+            elif resp=="2":
+                name_eval="porc_proyecto"
+            elif resp=="3":
+                name_eval="porc_examen"
+            elif resp=="4":
+                name_eval="porc_pruebcort"
+            elif resp=="5":
+                name_eval="porc_quiz"
+            elif resp=="6":
+                name_eval="porc_laboratorio"
+            elif resp=="7":
+                name_eval=input("Digite el nombre de la evaluación que desea crear.  ")
+            else:
+                print("Error en los datos, inténtalo nuevamente.")
+                add_evaluations()
+            porcantaje=input("Digite el procenteje que la va a asignar a ésta evaluación, de 0% a 100%  ")
+            #for q in cursos:
+             #   for i in q:
+              #      print(i)
+                    #x+=i
+            #print("Por el momento el porcentaje asignado es de",x)
+            for j in cursos:
+                for evaluaciones in j:
+                    evaluaciones[name_eval]=porcantaje
+
+    print("El código que ingresó del curso no existe, inténtalo nuevamente.")
+    add_evaluations()
+
+
+
+#en proceso
+def edit_evaluations():
+    print("Editar Evaluaciones")
+
+
+
+#en proceso
+def del_evaluations():
+    print("Eliminar Evaluaciones")
+
+
+#menu de evaluaciones listo
+def menu_evaluaciones():
+    print("----------------------------------")
+    print("-------|   Evaluaciones   |-------")
+    print("----------------------------------")
+    op=input("""-   1. Agregar evaluaciones      -
+-   2. Modificar evaluaciones    -
+-   3. Eliminar evaluaciones     -
+-   4. Menú principal
+-    """)
+    if op.isdigit():
+        if op=="1":
+            add_evaluations()
+        elif op=="2":
+            edit_evaluations()
+        elif op=="3":
+            del_evaluations()
+        elif op=="4":
+            menu_principal()
+        else:
+            print("\n__________________________________")
+            print(">>Debe de digitar datos válidos.<<")
+            print("__________________________________\n")
+            menu_evaluaciones()
+    else:
+        print("\n__________________________________")
+        print(">>Debe de digitar datos válidos.<<")
+        print("__________________________________\n")
+        menu_evaluaciones()
