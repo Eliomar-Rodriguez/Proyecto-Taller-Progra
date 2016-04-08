@@ -1,28 +1,28 @@
-estudiantes_y_profes=[{"nombre":"Vera Gamboa","Correo":"vgamboa@itcr.ac.cr","pass":"vgamboa","id":"309870123","tipo":"2"},
-                      {"nombre":"Diego Rojas","correo":"drojas@itcr.ac.cr","pass":"drojas","id":"109870654","tipo":"2"},
-                      {"nombre":"Eladio Cruz","correo":"ecruz@itcr.ac.cr","pass":"ecruz","id":"207650987","tipo":"2"},
-                      {"nombre":"Diego Mora","correo":"dmora@itcr.ac.cr","pass":"dmora","id":"701230234","tipo":"2"},
-                      {"nombre":"Steven Peraza","correo":"stevenperaza@gmail.com","pass":"stevenperaza","id":"2016112209","tipo":"1","carrera":"1"},
-                      {"nombre":"Kembly Salazar","correo":"kemsalazar@gmail.com","pass":"kemsalazar","id":"2016402331","tipo":"1","carrera":"5"},
-                      {"nombre":"Juan Mora","correo":"jmora@hotmail.com","pass":"jmora123","id":"2010198009","tipo":"1","carrera":"3"},
-                      {"nombre":"Gabriel Martinez","correo":"gmartinez@estudiantec.cr","pass":"gmatinez","id":"2013443216","tipo":"1","carrera":"1"},
-                      {"nombre":"Juan Rafael Morales","correo":"jrmorales@hotmail.com","pass":"jrmorales96","id":"2014772139","tipo":"1","carrera":"2"},
-                      {"nombre":"Carlos Morera","correo":"cmorera21@gmail.com","pass":"cmorera","id":"2009123456","tipo":"1","carrera":"4"},
-                      {"nombre":"Eliomar Rodríguez","correo":"rodriguez.elio.97@gmail.com","pass":"Capitan1","id":"2016108660","tipo":"1","carrera":"1"},
-                      {"nombre":"Angelo Medina","correo":"amedina@estudiantec.cr","pass":"amedina","id":"2016109990","tipo":"1","carrera":"5"},
-                      {"nombre":"Juan Primito Rivas","correo":"jprivas@gmail.com","pass":"jprivas","id":"2015012349","tipo":"1","carrera":"3"},
-                      {"nombre":"Jafeth Salas","correo":"jafsal97@gmail.com","pass":"Jafsal123","id":"2016421763","tipo":"1","carrera":"3"},
-                      {"nombre":"Carlos Restrepo Marín","correo":"crmarin21@gmail.com","pass":"crmarin21","id":"2016198611","tipo":"1","carrera":"1"},
-                      {"nombre":"Antonio Rodríguez Arguedas","correo":"antonio16--2012@hotmail.com","pass":"Capitan123","id":"2016108661","tipo":"1","carrera":"2"},
-                      {"nombre":"Angelo Aguilar","correo":"angelomix@gmail.com","pass":"mixmix1","id":"2011152364","tipo":"1","carrera":"3"},
-                      {"nombre":"Josue Chaves","correo":"jchaves@gmail.com","pass":"jchaves","id":"2009887512","tipo":"1","carrera":"4"},
-                      {"nombre":"Joshua Ramirez","correo":"jramirez4223@gmail.com","pass":"lolita123","id":"2014723912","tipo":"1","carrera":"3"},
+estudiantes_y_profes=[{"nombre":"Vera Gamboa","Correo":"vgamboa@itcr.ac.cr","pass":"vgamboa","id":"309870123","tipo":"2","telefono":"88765412"},
+                      {"nombre":"Diego Rojas","correo":"drojas@itcr.ac.cr","pass":"drojas","id":"109870654","tipo":"2","telefono":"12347654"},
+                      {"nombre":"Eladio Cruz","correo":"ecruz@itcr.ac.cr","pass":"ecruz","id":"207650987","tipo":"2","telefono":"24750091"},
+                      {"nombre":"Diego Mora","correo":"dmora@itcr.ac.cr","pass":"dmora","id":"701230234","tipo":"2","telefono":"50986123"},
+                      {"nombre":"Steven Peraza","correo":"stevenperaza@gmail.com","pass":"stevenperaza","id":"2016074411","tipo":"1","carrera":"1","telefono":"70245788"},
+                      {"nombre":"Kembly Salazar","correo":"kemsalazar@gmail.com","pass":"kemsalazar","id":"2016402331","tipo":"1","carrera":"5","telefono":"50887766"},
+                      {"nombre":"Juan Mora","correo":"jmora@hotmail.com","pass":"jmora123","id":"2010198009","tipo":"1","carrera":"3","telefono":"27471385"},
+                      {"nombre":"Gabriel Martinez","correo":"gmartinez@estudiantec.cr","pass":"gmatinez","id":"2013443216","tipo":"1","carrera":"1","telefono":"60998945"},
+                      {"nombre":"Juan Rafael Morales","correo":"jrmorales@hotmail.com","pass":"jrmorales96","id":"2014772139","tipo":"1","carrera":"2","telefono":"62436822"},
+                      {"nombre":"Carlos Morera","correo":"cmorera21@gmail.com","pass":"cmorera","id":"2009123456","tipo":"1","carrera":"4","telefono":"24602221"},
+                      {"nombre":"Eliomar Rodríguez","correo":"rodriguez.elio.97@gmail.com","pass":"Capitan1","id":"2016108660","tipo":"2","carrera":"1","telefono":"87237514"},
+                      {"nombre":"Angelo Medina","correo":"amedina@estudiantec.cr","pass":"amedina","id":"2016109990","tipo":"1","carrera":"5","telefono":"24619877"},
+                      {"nombre":"Juan Primito Rivas","correo":"jprivas@gmail.com","pass":"jprivas","id":"2015012349","tipo":"1","carrera":"3","telefono":"4751218"},
+                      {"nombre":"Jafeth Salas","correo":"jafsal97@gmail.com","pass":"Jafsal123","id":"2016421763","tipo":"1","carrera":"3","telefono":"88772197"},
+                      {"nombre":"Carlos Restrepo Marín","correo":"crmarin21@gmail.com","pass":"crmarin21","id":"2016198611","tipo":"1","carrera":"1","telefono":"88710712"},
+                      {"nombre":"Antonio Rodríguez Arguedas","correo":"antonio16--2012@hotmail.com","pass":"Capitan123","id":"2016108661","tipo":"1","carrera":"2","telefono":"24761213"},
+                      {"nombre":"Angelo Aguilar","correo":"angelomix@gmail.com","pass":"mixmix1","id":"2011152364","tipo":"1","carrera":"3","telefono":"89654310"},
+                      {"nombre":"Josue Chaves","correo":"jchaves@gmail.com","pass":"jchaves","id":"2009887512","tipo":"1","carrera":"4","telefono":"70223112"},
+                      {"nombre":"Joshua Ramirez","correo":"jramirez4223@gmail.com","pass":"lolita123","id":"2014723912","tipo":"1","carrera":"3","telefono":"87341514"},
                       {"nombre":"Dere Solorzano","correo":"dsolorsano97@gmail.com","pass":"matediscreta","id":"2014334523","tipo":"1","carrera":"2"},
-                      {"nombre":"Agie Rodriguez Arguedas","correo":"arodriarg@estudiantec.cr","pass":"arodriarg","id":"2011321937","tipo":"1","carrera":"1"},
-                      {"nombre":"Juan Carlos Arias","correo":"jcarias@hotmail.com","pass":"jcarias","id":"2012202421","tipo":"1","carrera":"2"},
-                      {"nombre":"Carlos José Mora","correo":"cjmora@hotmail.com","pass":"cjmora","id":"2010356721","tipo":"1","carrera":"3"},
-                      {"nombre":"Silvia Fulopp Patiño","correo":"silfupat48@gmail.com","pass":"gatoconrabia123","id":"2014234667","tipo":"1","carrera":"4"},
-                      {"nombre":"Carlos Restrepo Marín","correo":"cremarin@estudiantec.cr","pass":"carritoazul297","id":"2009176889","tipo":"1","carrera":"5"},]#Estudiantes y profesores
+                      {"nombre":"Agie Rodriguez Arguedas","correo":"arodriarg@estudiantec.cr","pass":"arodriarg","id":"2011321937","tipo":"1","carrera":"1","telefono":"24756623"},
+                      {"nombre":"Juan Carlos Arias","correo":"jcarias@hotmail.com","pass":"jcarias","id":"2012202421","tipo":"1","carrera":"2","telefono":"87651164"},
+                      {"nombre":"Carlos José Mora","correo":"cjmora@hotmail.com","pass":"cjmora","id":"2010356721","tipo":"1","carrera":"3","telefono":"40224312"},
+                      {"nombre":"Silvia Fulopp Patiño","correo":"silfupat48@gmail.com","pass":"gatoconrabia123","id":"2014234667","tipo":"1","carrera":"4","telefono":"50123381"},
+                      {"nombre":"Carlos Restrepo Marín","correo":"cremarin@estudiantec.cr","pass":"carritoazul297","id":"2009176889","tipo":"1","carrera":"5","telefono":"89764528"},]#Estudiantes y profesores
 
 cursos=[{"codigo":"123","nombre_curso":"Discreta"},{"codigo":"111","nombre_curso":"General"}]
 
@@ -54,38 +54,60 @@ def menu_profes(x):
 
 #de prueba
 def menu_estudiantes(x):
-    print("Bienvenido ",x)
+    print("Bienvenido (a) ",x)
 
 
 
 #logup totalmente listo
-def logup():
+def singup():
     print("""Digite el tipo de cuenta que va a crear
                                                 1. Estudiante
                                                 2. Profesor
                                                 3. Volver al menú principal""")
-    tipo=input("""Digite la opción deseada
+    tipo=input("""Digite la opción deseada.
 """)
     if tipo=="1":
         carne1=(input("Digite el número de carnet."))
-        if carne1.isdigit():
-            carne=carne1
-        else:
-            print("\nEl número de carnet debe de contener únicamente números, inténtalo nuevamente.\n")
-            logup()
+        for m in estudiantes_y_profes:
+            if carne1==m["id"]:
+                print(" _ _ _ _ _ _ _ _ _ ")
+                print("""|      Error      |
+|- - - - - - - - -|- - - - - - - - - - - - - -|
+|   El número de carnet ingresado pertenece   |
+|   a otro usuario que ya está registrado,    |
+|   inténtalo nuevamente.                     | """)
+                print("|_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|")
+                singup()
+            elif carne1.isdigit():
+                carne=carne1
+            else:
+                print("\nEl número de carnet debe de contener únicamente números, inténtalo nuevamente.\n")
+                singup()
+
     elif tipo=="2":
         carne1=input("Digite el número de cédula.")
-        if carne1.isdigit():
-            carne=carne1
-        else:
-            print("\nEl número de cédula debe de contener únicamente números, inténtalo nuevamente.\n")
-            logup()
+        for m in estudiantes_y_profes:
+            if carne1==m["id"]:
+                print(" _ _ _ _ _ _ _ _ _ ")
+                print("""|      Error      |
+|- - - - - - - - -|- - - - - - - - - - - - - -|
+|   El número de carnet ingresado pertenece   |
+|   a otro usuario que ya está registrado,    |
+|   inténtalo nuevamente.                     | """)
+                print("|_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|")
+                singup()
+            elif carne1.isdigit():
+                carne=carne1
+            else:
+                print("\nEl número de cédula debe de contener únicamente números, inténtalo nuevamente.\n")
+                singup()
     elif tipo=="3":
         menu_principal()
     else:
         print("Error en los datos, inténtalo nuevamente.")
-        logup()
+        singup()
     name=input("Digite su nombre completo.")
+    telef=input("Digite su número de teléfono.")
     mail=input("Digite su correo electrónico.")
     contra=input("Digite la contraseña que desea utilizar.")
     if tipo=="1":
@@ -98,7 +120,7 @@ def logup():
         5. Administración de Empresas
         """)
         carrera=input("Digite la opción de su carrera.")
-        estudiantes_y_profes.append({"nombre":name,"correo":mail,"pass":contra,"id":carne,"tipo":tipo,"carrera":carrera})
+        estudiantes_y_profes.append({"nombre":name,"correo":mail,"pass":contra,"id":carne,"tipo":tipo,"carrera":carrera,"telefono":telef})
     elif tipo=="2":
         estudiantes_y_profes.append({"nombre":name,"correo":mail,"pass":contra,"id":carne,"tipo":tipo})
     print("El proceso de registro se realizó correctamente.")
@@ -126,13 +148,17 @@ def menu_principal():
     if op=="1":
         login()
     elif op=="2":
-        logup()
+        singup()
     elif op=="3":
         quit()
     else:
-        print("\n _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
-        print("|     Error en los datos, debe de digitar una opción válida.    |")
-        print("|_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|\n")
+        print(" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
+        print("""| >> Error en su respuesta << |
+|- - - - - - - - - - - - - - -|- - - - - - - -|
+|   La respuesta que usted ingresó no es      |
+|   ninguna de las anteriores, por favor      |
+|   digite una opción válida.                 | """)
+        print("|_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|\n")
         menu_principal()
 
 
@@ -158,67 +184,52 @@ def login():
 
 
 #agregar evaluaciones en proceso
-def add_evaluations(x):
+def add_evaluations():
+
     code_course=input("Digite el código del curso. ")
     for i in cursos:
-        if code_course ==i["codigo"]:
+        if code_course ==i["codigo"]: #recorro la lista de cursos en busca del codigo del curso
             print("----------------------------------")
             print("-  Evaluaciones predeterminadas  -")
             print("----------------------------------")
             print("""
-         1.Tarea
-         2.Proyecto
-         3.Exámen
-         4.Prueba Corta
-         5.Quiz
-         6.Laboratorio
-         7.Otro
+            1.Tarea
+            2.Proyecto
+            3.Exámen
+            4.Prueba Corta (quiz)
+            5.Laboratorio
+            6.Otro
             """)
             resp=input("Digite la opción de la evaluación que desea crear. ")
+            try:
+                print(" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
+                print("|    El porcentaje a asignar debe de tener punto, ejemplo: 15.7     |")
+                print(" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
+                porcantaje=float(input("Digite el procenteje que la va a asignar a ésta evaluación, de 0% a 100%;  por ejemplo: 13.5   "))
+            except ValueError:
+                print("Error en los datos, el número decimal debe de usar punto en vez de coma. ")
+                add_evaluations()
             if resp=="1":
-                name_eval="porc_tarea"
-            elif resp=="2":
-                name_eval="porc_proyecto"
-            elif resp=="3":
-                name_eval="porc_examen"
-            elif resp=="4":
-                name_eval="porc_pruebcort"
-            elif resp=="5":
-                name_eval="porc_quiz"
-            elif resp=="6":
-                name_eval="porc_laboratorio"
-            elif resp=="7":
-                name_eval=input("Digite el nombre de la evaluación que desea crear.  ")
-            else:
-                print("Error en los datos, inténtalo nuevamente.")
-                add_evaluations(x)
-            porcantaje=int(input("Digite el procenteje que la va a asignar a ésta evaluación, de 0% a 100%  "))
-            print(cursos)
-            p=name_eval
-            for q in cursos:
-                if name_eval in q:
-                    print("La evaluación seleccionada ya se encuentra creada, inténtalo nuevamente.")
-                    add_evaluations(x)
-                else:
-                    for j in cursos:
-                        for code_course in j:
-                            if code_course in j["codigo"]:
-                                j[name_eval]=porcantaje
-                                print(cursos)
-                                print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
-                                opc=input("""   ¿Desea agregar otra evaluación?     1.Si
-                                       2.No
-                                       """)
-                                print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
-                                if opc=="1":
-                                    add_evaluations(x)
-                                elif opc=="2":
-                                    menu_profes(x)
-                                else:
-                                    print("Debe digitar datos válidos.")
-                                    menu_profes(x)
-    print("El código que ingresó del curso no existe, inténtalo nuevamente.")
-    add_evaluations(x)
+                name_eval=input("Digite el nombre de la tarea a crear. ")
+                for m in i:
+                    if name_eval in m: #si la evaluacion a crear ya existe entonces entonces le pongo un mensaje de error
+                        print(" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
+                        print("""| >> Error en su respuesta << |
+|- - - - - - - - - - - - - - -|- - - - - - - -|
+|   La respuesta que usted ingresó no es      |
+|   ninguna de las anteriores, por favor      |
+|   digite una opción válida.                 | """)
+                        print("|_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|\n")
+
+                    else:
+                        i[name_eval]=porcantaje
+                        print(cursos)
+                        add_evaluations()
+
+
+
+
+
 
 
 #en proceso
@@ -244,7 +255,7 @@ def menu_evaluaciones(x):
 -    """)
     if op.isdigit():
         if op=="1":
-            return add_evaluations(x)
+            return add_evaluations()
         elif op=="2":
             return edit_evaluations(x)
         elif op=="3":
@@ -262,4 +273,4 @@ def menu_evaluaciones(x):
         print("__________________________________\n")
         menu_evaluaciones(x)
 
-login()
+menu_principal()
