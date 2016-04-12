@@ -50,7 +50,8 @@ def curso():
     else:
         print("Digite una opcion valida, por favor")
         curso()
-        
+
+
 #Funcion para repetir acciones dentro de otra funcion(en este caso en cursos)
 #Recibe un string por parte del usuario para regresar al menu principal o salir del programa. La restricción es que la opción debe ser "1" o "2".
 def otra_accion_cur(): 
@@ -68,6 +69,9 @@ No=2
             print("Error, digite un valor valido")
             otra_accion_cur()
         otra_accion_cur()
+
+
+
 ##Funcion para crear cursos mediante la utilización de ciclos con variables "i" y "a", la función input y comandos de listas y diccionarios.
 ##Entradas: Código de curso, nombre de curso, ID del profesor, cantidad de créditos, todos tipo string que ingresa el usuario.
 ##Salidas: Un diccionario dentro de la lista de cursos con todos los datos del curso que se ha creado.
@@ -95,6 +99,7 @@ def crear_curso():
     print("El curso ha sido creado exitosamente")
     otra_accion_cur()   
 
+
 #Funcion de modificar cursos
 #Entrada: Codigo de curso, nuevo código, ID, nombre y créditos del curso que se desea modificar.
 #Salida: Curso modificado.
@@ -102,8 +107,7 @@ def crear_curso():
 def modificar_curso():
     x=input("""Digite el codigo del curso
 """)
-    for i in cursos:
-        for a in i:         #Ciclo con variables "i", la cual recorre la lista cursos y "a", que recorre los diccionarios de la lista cursos.
+    for i in cursos:         #Ciclo con variables "i", la cual recorre la lista cursos y "a", que recorre los diccionarios de la lista cursos.
             if x in i.values():
                 print("El curso esta en el sistema","\n")       #Pequeño menú que indica que parte de la información del curso se desea modicficar.
                 o=input("""Digite donde desea realizar los cambios
@@ -130,7 +134,7 @@ Cantidad de creditos=4
                     i['creditos']=e
                 else:
                     print("Digite un valor valido")
-                    cambio_cursos()
+                    modificar_curso()
                 print("El curso ha sido modificado exitosamente")
                 u=input("""
 Desea realizar otra modificacion?
@@ -147,7 +151,8 @@ No=2
             else:
                 print("El curso no se encuentra en el sistema")
                 otra_accion_cur()
-                
+
+
 #Funcion para borrar cursos
 #Entrada: Codigo de curso
 #Salida: Curso eliminado de la lista de cursos.
@@ -156,7 +161,6 @@ def borrar_curso():
     x=input("""Digite el codigo del curso
 """)
     for i in cursos:        #Ciclo que busca si el curso está en la lista de cursos recorriendo la lista en sí con la variable "i" y "a", respectivamente
-        for a in i:
             if x in i.values():
                 print("El curso esta en el sistema")
                 v=input("""
@@ -166,7 +170,7 @@ No=2
 """)
                 if v=="1":
                     for i in cursos:            #Ciclo que valida si el curso no tiene estudiantes matriculador, en ese caso, lo elimina de la lista de cursos.
-                        for a in cursos:                    
+                        for a in i:
                             if a['estudiantes mat']==[]:
                                 cursos.remove(i)
                                 print("El curso ha sido borrado exitosamente")
@@ -210,6 +214,7 @@ def estudiantes():
         print("Digite una opcion valida, por favor")
         estudiantes()
 
+
 #Funcion para repetir acciones dentro de otra funcion(en este caso en estudiantes)
 #Recibe un string por parte del usuario para regresar a estudiantes o al menu principal. La restricción es que la opción debe ser "1" o "2".
 def otra_accion_es():
@@ -227,7 +232,8 @@ No=2
         print("Error, digite un valor valido")
         otra_accion_es()
     otra_accion_es()
-    
+
+
 #Funcion para agregar estudiantes
 #Entrada: Codigo de curso y carné del estudiante que desea agregar a un curso el profesor.
 #Salida: Estudiante agregado a un curso.
@@ -237,7 +243,6 @@ def agregar_estudiante():
         p=input("""Digite el codigo del curso en el cual desea agregar un estudiante
 """)
         for i in cursos:        #Ciclo que busca si el curso está en la lista de cursos recorriendo la lista en sí con la variable "i" y "a", respectivamente
-            for a in i:     
                 if p in i.values(): 
                     print("El curso esta en el sistema")
                     
@@ -287,14 +292,13 @@ Busque el nombre del alumno que desea agregar""")
 def eliminar_estudiante():
     x=input("""Digite el codigo de curso en el cual desea eliminar un estudiante
 """)
-    for i in cursos:
-        for a in i:                 #Ciclo que busca si el curso está en la lista de cursos recorriendo la lista en sí con la variable "i" y "a", respectivamente
-            if x in i.values():
-                print("El curso esta en el sistema")
-                break
-            else:
-                print("El curso que ingreso no se encuentra en el sistema, intente nuevamente")
-                eliminar_estudiante()
+    for i in cursos:               #Ciclo que busca si el curso está en la lista de cursos recorriendo la lista en sí con la variable "i" y "a", respectivamente
+        if x in i.values():
+            print("El curso esta en el sistema")
+            break
+        else:
+            print("El curso que ingreso no se encuentra en el sistema, intente nuevamente")
+            eliminar_estudiante()
     p=input("""Digite el carne del estudiante que desea eliminar
 """)
     for r in i['estudiantes mat']:      #Ciclo que busca si el estudiante está en la lista de estudiantes_y_profes y lo elimina del curso.
@@ -302,6 +306,7 @@ def eliminar_estudiante():
             i['estudiantes mat'].remove(r)
     print("El estudiante ha sido eliminado con exito")
     otra_accion_es()
+
 
 ##Función que despliega un menu con las funciones relacionadas con las consultas del profesor.
 ##Entradas: Una opción que ingresa el usuario.
@@ -336,6 +341,7 @@ def menu_consultas():
         print("Digite una opcion valida, por favor")
         menu_consultas()
 
+
 #Funcion para repetir acciones dentro de otra funcion(en este caso en consultas)
 #Recibe un string por parte del usuario para regresar a consultas o al menu principal. La restricción es que la opción debe ser "1" o "2".
 def otra_accion_con(): 
@@ -353,16 +359,19 @@ No=2
             print("Error, digite un valor valido")
             otra_accion_con()
         otra_accion_con()
+
+
 #Funcion para imprimir la lista de todos los estudiantes
 #Entrada: Tipo de cuenta creada en el registro, (en este caso, "1" de estudiantes).
 #Salida: Lista impresa de todos los estudiantes con sus datos personales.
 #Restricciones: Los estudiantes se deben encontrar en la lista de estudiantes_y_profes y ser de tipo "1".
 def lis_es():
     for q in estudiantes_y_profes: #Ciclo que busca a todos los estudiantes en el sistema y los imprime.
-        if a['tipo']=="1":
+        if q['tipo']=="1":
                 print(q['nombre'],"\t","\t","\t",q['id'],"\t","\t","\t",q['correo'],"\t","\t","\t",q['telefono'],"\t","\t","\t",q['carrera'],"\t","\t","\t","\n")
     otra_accion_con()
-    
+
+
 #Funcion para imprimir la lista de todos los cursos
 #Entrada: Cursos creados por defaulto por el programa.
 #Salida: Lista impresa de todos los cursos con su información y el profesor que lo imparte.
@@ -374,7 +383,8 @@ def lis_cur():
             if a['tipo']=="2" and i['id']==a['id']:
                 print (i['codigo'],"\t","\t","\t",i['nombre'],"\t","\t","\t",i['id'],"\t","\t","\t",a['nombre'],"\n")
     otra_accion_con()
-    
+
+
 #Funcion que despliega un menu de consultas especificamente disenado para un solo curso.
 #Entradas: Una opción que ingresa el usuario.
 #Salidas: Una función de acuerdo al deseo del usuario.
@@ -407,6 +417,8 @@ def cons_cur():
     else:
         print("Digite una opcion valida, por favor")
         cons_cur()
+
+
 #Funcion para imprimir la lista de estudiantes de un curso "x".
 #Entrada: Código del curso, tipo de cuenta creada en el registro, (en este caso, "1" de estudiantes).
 #Salida: Lista impresa de todos los estudiantes matriculados en un curso con sus datos personales.
@@ -415,16 +427,19 @@ def lis_es_mat():
     p=input("""Digite el codigo del curso en el cual desea ver la lista de estudiantes matriculados
 """)
     for i in cursos:            #Ciclo que busca si el curso está en el sistema.
-        for a in i:
-            if p in i.values():
-                print("El curso esta en el sistema")
-                break
+        if p in i.values():
+            print("El curso esta en el sistema")
+            break
     for q in estudiantes_y_profes:
         if len (q['id'])==10 and q in i['estudiantes mat']: ##Ciclo que busca todos los estudiantes matriculados en un curso y los imprime.
             print(q['nombre'],"\t","\t","\t",q['id'],"\n")
     otra_accion_con()
+
+
 def not_prom():
     return#Aqui quedo por hoy, falta esperar a las evaluaciones para terminarlo.
+
+
 
 #Menu de profes
 #Funcion que despliega el menu principal especificamente disenado para profesores.
@@ -448,7 +463,7 @@ def menu_profes():
     elif op=="2":
         estudiantes()
     elif op=="3":
-        evaluaciones()
+        menu_evaluaciones(x)
     elif op=="4":
         menu_consultas()
     elif op=="5":

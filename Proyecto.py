@@ -362,10 +362,6 @@ def edit_evaluations():
                 print("Error, debe digitar alguna de las opciones. ")
 
 
-
-
-
-
 #en proceso
 def del_evaluations():
     code_course=input("Digite el código del curso. ")
@@ -421,10 +417,6 @@ def del_evaluations():
             else:
                 print("La palabra que busca eliminar no se encuentró, inténtalo nuevamente. ")
                 del_evaluations()
-
-
-
-
 
 del_evaluations()
 
