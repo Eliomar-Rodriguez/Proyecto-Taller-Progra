@@ -418,7 +418,7 @@ def del_evaluations():
                 print("La palabra que busca eliminar no se encuentró, inténtalo nuevamente. ")
                 del_evaluations()
 
-del_evaluations()
+
 
 
 #menu de evaluaciones listo

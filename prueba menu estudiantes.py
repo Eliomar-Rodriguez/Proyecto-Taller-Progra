@@ -45,8 +45,8 @@ No=2
 #Salida: Lista impresa de todos los cursos matriculados del estudiante con su informacion general.
 #Restricciones: Los estudiantes se deben encontrar en la lista de estudiantes_y_profes y estar matriculados en los cursos.
 def ver_cursos(): #Pendiente!!/Idea para selec cursos:Pedir un input con el nombre del curso, (ej:'Mate Discreta'), hacer un ciclo para buscarlo en [cursos] y que imprima las notas.
-        x=input("asd")#Provisional, (unir con login)
-        print ("\t","Lista de cursos matriculados")
+        x=input("Digite su identificación. ")#Provisional, (unir con login)
+        print ("\t","Lista de cursos matriculados. ")
         for t in cursos:
                 for w in t['estudiantes mat']:                          #Ciclo que recorre la lista de cursos, y los diccionarios dentro de cada curso hasta encontrar si el estudiante esta matriculado en un curso, en ese caso, lo imprime inmediatamente. 
                         if x in w['id']  and len (x)==10:
@@ -60,8 +60,8 @@ def ver_cursos(): #Pendiente!!/Idea para selec cursos:Pedir un input con el nomb
 #Restricciones: Los estudiantes se deben encontrar en la lista de estudiantes_y_profes.
 
 def cursos_matri():
-        x=input("asd")#Provisional, (unir con login)/Misma idea de arriba...
-        print("\t","Lista de cursos matriculados")
+        x=input("Digite su identificación. ")#Provisional, (unir con login)/Misma idea de arriba...
+        print("\t","Lista de cursos matriculados. ")
         for r in cursos:
                 for w in r['estudiantes mat']:                                          #Ciclo que recorre la lista de cursos, y los diccionarios dentro de cada curso hasta encontrar si el estudiante esta matriculado en un curso, en ese caso, lo imprime inmediatamente.
                         if x in w['id'] and len (x)==10:
@@ -80,7 +80,7 @@ def cursos_matri():
 #Salida: Estudiante desmatriculado de un curso elegido por el usuario.
 #Restricciones: Los estudiantes se deben encontrar en la lista de estudiantes_y_profes y estar matriculados en un curso, el codgio de curso debe corresponder con uno que exista en el sistema.
 def desmatri_cursos():
-        x=input('id')#Provisional, (unir con login)
+        x=input('Digite su identificación. ')#Provisional, (unir con login)
         code=input("""Digite el codigo de curso en el cual se desea desmatricular
 """)
         for p in cursos:
@@ -100,7 +100,7 @@ def desmatri_cursos():
         otra_accion_est()
 
 def matri_cursos():
-        x=input("id")#Provisional, (unir con login)
+        x=input("Digite su identificación. ")#Provisional, (unir con login)
         matri=[]
         code=input("""Digite el codigo de curso en el cual se desea matricular
 """)
