@@ -50,14 +50,14 @@ estudiantes_y_profes = [
     {"nombre": "Carlos Restrepo Marín", "correo": "cremarin@estudiantec.cr", "pass": "carritoazul297",
      "id": "2009176889", "tipo": "1", "carrera": "5", "telefono": "89764528"}, ]  # Estudiantes y profesores
 
-cursos = [{"codigo": "123", "nombre_curso": "Discreta", "tottareas": 0,
-           "tareas": ["tarea1", 1, "tarea2", 2, "tarea3", 3, "tarea4", 4], "totexaemenes": 0, "examenes": [],
+cursos = [{"codigo": "123","id":"2016108660","creditos":"2", "nombre": "Discreta", "tottareas": 0,
+           "tareas":[{'porcentaje': 2.0, 'nombre': 'tarea1'},{'porcentaje': 3.0, 'nombre': 'tarea2'}], "totexaemenes": 0, "examenes": [],
            "totproyectos": 0, "proyectos": [], "totquiz": 0, "quiz": [], "tototros": 0, "otros": [],
-           "totlaboratorios": 0, "laboratorios": []},
-          {"codigo": "111", "nombre_curso": "General", "tareas": [], "examenes": [], "proyectos": [], "quiz": [],
-           "otros": [], "laboratorios": []}]
+           "totlaboratorios": 0, "laboratorios": [],"estudiantes mat":[]},
+          {"codigo": "111", "nombre": "General", "tareas": [], "examenes": [], "proyectos": [], "quiz": [],
+           "otros": [], "laboratorios": [],"id":"2016108660","creditos":"2","estudiantes mat":[]}]
 
-
+c = []
 ##################################################################################################################################################
 ##
 ##          esta parte pertenece a estudiantes
@@ -294,8 +294,7 @@ def crear_curso(xl):
     if y not in a.values():
         print("Error, el id no se encuentra en el sistema")
         otra_accion_cur(xl)
-    cursos.append(
-        {'codigo': x, 'id': y, 'nombre': z, 'creditos': w, 'estudiantes mat': [], 'tareas': [], 'examenes': [],
+    cursos.append({'codigo': x, 'id': y, 'nombre': z, 'creditos': w, 'estudiantes mat': [], 'tareas': [], 'examenes': [],
          'proyectos': [], 'quiz': [], 'laboratorios': [],
          'otros': []})  # Comando que añade el curso con sus datos en la lista de cursos.
     print("El curso ha sido creado exitosamente")
@@ -309,10 +308,8 @@ def crear_curso(xl):
 def modificar_curso(xl):
     x = input("""Digite el codigo del curso
 """)
-    for i in cursos:  # Ciclo con variables "i", la cual recorre la lista cursos y "a", que recorre los diccionarios de la lista cursos.
-        if x in i.values():
-            print("El curso esta en el sistema",
-                  "\n")  # Pequeño menú que indica que parte de la información del curso se desea modicficar.
+    for i in cursos:  # Ciclo con variables "i", la cual recorre la lista cursos.
+        if x==i['codigo']:        # Pequeño menú que indica que parte de la información del curso se desea modicficar.
             o = input("""Digite donde desea realizar los cambios
 Codigo===============1
 ID===================2
@@ -363,7 +360,7 @@ No=2
 def borrar_curso(xl):
     x = input("""Digite el codigo del curso
 """)
-    for i in cursos:  # Ciclo que busca si el curso está en la lista de cursos recorriendo la lista en sí con la variable "i" y "a", respectivamente
+    for i in cursos:  # Ciclo que busca si el curso está en la lista de cursos recorriendo la lista en sí con la variable "i"
         if x in i.values():
             print("El curso esta en el sistema")
             v = input("""
@@ -373,8 +370,7 @@ No=2
 """)
             if v == "1":
                 for i in cursos:  # Ciclo que valida si el curso no tiene estudiantes matriculador, en ese caso, lo elimina de la lista de cursos.
-                    for a in i:
-                        if a['estudiantes mat'] == []:
+                        if i['estudiantes mat']==[]:
                             cursos.remove(i)
                             print("El curso ha sido borrado exitosamente")
                         else:
@@ -467,7 +463,7 @@ No=2
             elif u == "2":
                 print("""Esta es la lista completa de estudiantes sin matricular en el curso,
 Busque el nombre del alumno que desea agregar""")
-                print("Nombre", "\t", "\t", "\t", "\t", "Carne", "\t", "\t", "\t", "\n")
+                print("Nombre", "\t", "\t", "\t", "\t", "Carné", "\t", "\t", "\t", "\n")
                 for q in estudiantes_y_profes:
                     if len(q['id']) == 10 and q not in i[
                         'estudiantes mat']:  ##Ciclo que imprime los estudiantes en la lista de estudiantes_y_profes que no se encuentren matriculados en el curso.
@@ -572,8 +568,18 @@ No=2
 def lis_es(xl):
     for q in estudiantes_y_profes:  # Ciclo que busca a todos los estudiantes en el sistema y los imprime.
         if q['tipo'] == "1":
-            print(q['nombre'], "\t", "\t", "\t", q['id'], "\t", "\t", "\t", q['correo'], "\t", "\t", "\t",
-                  q['telefono'], "\t", "\t", "\t", q['carrera'], "\t", "\t", "\t", "\n")
+            if q['carrera']=="1":
+                print(q['nombre'], "\t", "\t", "\t", q['id'], "\t", "\t", "\t", q['correo'], "\t", "\t", "\t",q['telefono'], "\t", "\t", "\t", "Ingeniería en Computación", "\t", "\t", "\t", "\n")
+            elif q['carrera']=="2":
+                print(q['nombre'], "\t", "\t", "\t", q['id'], "\t", "\t", "\t", q['correo'], "\t", "\t", "\t",q['telefono'], "\t", "\t", "\t", "Ingeniería en Producción Industrial", "\t", "\t", "\t", "\n")
+            elif q['carrera']=="3":
+                print(q['nombre'], "\t", "\t", "\t", q['id'], "\t", "\t", "\t", q['correo'], "\t", "\t", "\t",q['telefono'], "\t", "\t", "\t", "Ingeniería en Agronomía", "\t", "\t", "\t", "\n")
+            elif q['carrera']=="4":
+                print(q['nombre'], "\t", "\t", "\t", q['id'], "\t", "\t", "\t", q['correo'], "\t", "\t", "\t",q['telefono'], "\t", "\t", "\t", "Ingeniería en Electrónica", "\t", "\t", "\t", "\n")
+            elif q['carrera']=="5":
+                print(q['nombre'], "\t", "\t", "\t", q['id'], "\t", "\t", "\t", q['correo'], "\t", "\t", "\t",q['telefono'], "\t", "\t", "\t", "Gestión del Turismo Rural Sostenible", "\t", "\t", "\t", "\n")
+            elif q['carrera']=="6":
+                print(q['nombre'], "\t", "\t", "\t", q['id'], "\t", "\t", "\t", q['correo'], "\t", "\t", "\t",q['telefono'], "\t", "\t", "\t", "Administración de Empresas", "\t", "\t", "\t", "\n")
     otra_accion_con(xl)
 
 
@@ -582,8 +588,7 @@ def lis_es(xl):
 # Salida: Lista impresa de todos los cursos con su información y el profesor que lo imparte.
 # Restricciones: Los cursos se deben encontrar en la lista de cursos y los profesores deben estar en la lista de estudiantes_y_profes y ser de tipo "2".
 def lis_cur(xl):
-    print("\t", "\t", "\t", "Lista de total de cursos", "\n", "Codigo de curso", "\t", "Nombre del curso", "\t", "\t",
-          "Id del profesor", "\t", "\t", "Nombre del profesor")
+    print("\t", "\t", "\t", "Lista de total de cursos", "\n", "Codigo de curso", "\t", "Nombre del curso", "\t", "\t","Id del profesor", "\t", "\t", "Nombre del profesor")
     for i in cursos:
         for a in estudiantes_y_profes:  # Ciclo que busca todos los cursos en el sistema y los imprime, además de buscar e imprimir la info. del profe que los imparte.
             if a['tipo']=="2" and i['id']==a['id']:
@@ -634,8 +639,11 @@ def lis_es_mat(xl):
 """)
     for i in cursos:  # Ciclo que busca si el curso está en el sistema.
         if p in i.values():
-            print("El curso esta en el sistema")
             break
+        else:
+            print("El curso no se encuentra en el sistema, pruebe de nuevo")
+            lis_es_mat(xl)
+    print("----------------Lista de estudiantes matriculados-------------------------")
     for q in estudiantes_y_profes:
         if len(q['id']) == 10 and q in i['estudiantes mat']:  ##Ciclo que busca todos los estudiantes matriculados en un curso y los imprime.
             print(q['nombre'], "\t", "\t", "\t", q['id'], "\n")
@@ -693,7 +701,7 @@ def menu_profes(xl):
 ##
 ##################################################################################################################################################
 
-c = []
+
 
 
 
@@ -759,9 +767,9 @@ def singup():
         1. Ingeniería en Computación
         2. Ingeniería en Producción Industrial
         3. Ingeniería en Agronomía
-        3. Electrónica
-        4. Gestión del Turismo Rural Sostenible
-        5. Administración de Empresas
+        4. Electrónica
+        5. Gestión del Turismo Rural Sostenible
+        6. Administración de Empresas
         """)
         carrera = input("Digite la opción de su carrera.")
         estudiantes_y_profes.append(
@@ -805,7 +813,7 @@ def nomporeva(hh, resp):
     # ENTRADAS: nombre de la evaluacion, porcentaje a asignar
     # SALIDAS: crear la evaluacion
     # RESTRICCIONES: no debe existir una evaluacion con el mismo nombre, el porcentaje no puede pasarse de 100%, el procentaje debe tener punto en vez de coma
-
+    q={}
     if resp == "1":
         evaluacion = "tareas"
     elif resp == "2":
@@ -844,8 +852,11 @@ def nomporeva(hh, resp):
                             print("|                            el 100%                                |")
                             print(" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
                             porcantaje = float(input("Digite el procenteje a asignar  "))
-                            c.append(name_eval)  # proceso de agregar la evaluacion
-                            c.append(porcantaje)
+
+                            q["nombre"]=name_eval
+                            q["porcentaje"]=porcantaje
+                            c.append(q)
+
                             break
                         except ValueError:
                             print("Error en los datos, el número decimal debe de usar punto en vez de coma. ")
@@ -938,31 +949,33 @@ def edit_evaluations():
             else:
                 print("Error, debe digitar una opción válida. ")
                 edit_evaluations()
-            print("\nEstas son las tareas creadas en este curso: ")
-            for p in range(0, len(i["tareas"]), 2):
-                z = p + 1
-                print("\t", i['tareas'][p], "\t", i['tareas'][z])
+            print("\nEstas son las(os)",posicion,"disponibles. ")
+            for a in i[posicion].items():
+                print(a)
             op = input("""¿Qué desea modificar?
             1.Nombre de la evaluación
             2.Porcentaje asignado
+            3.Menú principal
             """)
             if op == "1":
-                nombre_viejo = input("Digite el nombre de la evaluación a modificar. ")
-                new_name = input("Digite el nuevo nombre a asignar")
-                for u in i["tareas"]:
-                    if nombre_viejo == u[i("tareas")]:
-                        nombre_viejo[u] = new_name
-                print(cursos)
+                    nombre_viejo = input("Digite el nombre de la evaluación a modificar. ")
+                    if nombre_viejo==a:
+                            new_name = input("Digite el nuevo nombre a asignar")
+                            a=new_name
+                            print(cursos)
+                            break
+
+
 
             elif op == "2":
-                nombre_viejo = input("Digite el nombre de la evaluación a modificar. ")
-                porc = input("Digite el nuevo porcentaje que asiganará. ")
-                if nombre_viejo in i["tareas"]:
-                    i[nombre_viejo] = porc
+                    nombre_viejo = input("Digite el nombre de la evaluación a modificar. ")
+                    porc = input("Digite el nuevo porcentaje que asiganará. ")
+                    if nombre_viejo in i[posicion]:
+                        i[nombre_viejo] = porc
             elif op == "3":
-                menu_profes(x)
+                    menu_profes(x)
             else:
-                print("Error, debe digitar alguna de las opciones. ")
+                    print("Error, debe digitar alguna de las opciones. ")
 
 
 # en proceso
@@ -997,13 +1010,10 @@ def del_evaluations():
 
             delpala = input("Digite el nombre de la evaluación que desea eliminar. ")
             for d in i[posicion]:
-                if d == delpala:
-                    print(d)
-                    print(delpala)
-                    del i[posicion][d]
-
-                if delpala == d:
-                    del i[posicion][d]
+                    if delpala==d['nombre']:
+                        print(cursos)
+                        i[posicion].remove(d)
+                        print("listo")
 
                     try:
 
@@ -1021,7 +1031,7 @@ def del_evaluations():
                 print("La palabra que busca eliminar no se encuentró, inténtalo nuevamente. ")
                 del_evaluations()
 
-
+del_evaluations()
 # menu de evaluaciones listo
 def menu_evaluaciones(xl):
     print("----------------------------------")
@@ -1038,7 +1048,7 @@ def menu_evaluaciones(xl):
         elif op == "2":
             return edit_evaluations(xl)
         elif op == "3":
-            return del_evaluations(xl)
+            return del_evaluations()
         elif op == "4":
             return menu_profes(xl)
         else:
