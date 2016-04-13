@@ -965,7 +965,6 @@ def edit_evaluations():
                             if nombre_viejo==d['nombre']:
                                 new_name = input("\nDigite el nuevo nombre a asignar. ")
                                 d["nombre"]=new_name
-
                                 print(cursos)
                                 break
 
