@@ -805,7 +805,7 @@ def login():
                 return menu_profes(xl)
     print(
         " Datos no válidos, inténtalo nuevamente.\n")  # sino estan los datos se le muestra un mensaje y el proceso se repite hasta que ingrese bien los datos
-    login()
+
 
 
 def nomporeva(hh, resp):
@@ -950,35 +950,49 @@ def edit_evaluations():
                 print("Error, debe digitar una opción válida. ")
                 edit_evaluations()
             print("\nEstas son las(os)",posicion,"disponibles. ")
-            for a in i[posicion].items():
-                print(a)
+            print("\n- - - - - - - - - - - - - - - - - - - - - - - - -")
+            for a in i[posicion]:
+                print(a["nombre"],"\t\t",a["porcentaje"])
+            print("- - - - - - - - - - - - - - - - - - - - - - - - -\n")
             op = input("""¿Qué desea modificar?
             1.Nombre de la evaluación
             2.Porcentaje asignado
             3.Menú principal
             """)
             if op == "1":
-                    nombre_viejo = input("Digite el nombre de la evaluación a modificar. ")
-                    if nombre_viejo==a:
-                            new_name = input("Digite el nuevo nombre a asignar")
-                            a=new_name
-                            print(cursos)
-                            break
+                    nombre_viejo = input("\nDigite el nombre de la evaluación a modificar. ")
+                    for d in i[posicion]:
+                            if nombre_viejo==d['nombre']:
+                                new_name = input("\nDigite el nuevo nombre a asignar. ")
+                                d["nombre"]=new_name
+                                print(cursos)
+                                break
+
+
 
 
 
             elif op == "2":
-                    nombre_viejo = input("Digite el nombre de la evaluación a modificar. ")
-                    porc = input("Digite el nuevo porcentaje que asiganará. ")
-                    if nombre_viejo in i[posicion]:
-                        i[nombre_viejo] = porc
+                    nombre_viejo = input("\nDigite el nombre de la evaluación para modificar el pocentaje. \n")
+                    for d in i[posicion]:
+
+
+                            if nombre_viejo==d['nombre']:
+                                new_name = input("\nDigite el nuevo porcentaje a asignar. ")
+                                d["porcentaje"]=new_name
+                                print(cursos)
+                                break
+
+
             elif op == "3":
                     menu_profes(x)
             else:
                     print("Error, debe digitar alguna de las opciones. ")
+        else:
 
-
-# en proceso
+            edit_evaluations()
+edit_evaluations()
+#listo
 def del_evaluations():
     code_course = input("Digite el código del curso. ")
     for i in cursos:
@@ -1014,19 +1028,9 @@ def del_evaluations():
                         print(cursos)
                         i[posicion].remove(d)
                         print("listo")
-
-                    try:
-
-                        # if delpala==d:
-                        # xx=d
-                        # del i[posicion][d]          #BUSCAR Y ELIMINAR LOS DOS DATOS, YA QUE ESTA ELIMINANDO SOLAMENTE UNO
-
-                        print(cursos)
-                        # print(xx)
-                        break
-
-                    except:
-                        print("listo")
+                    else:
+                        print("La palabra que busca eliminar no se encuentró, inténtalo nuevamente. ")
+                        del_evaluations()
             else:
                 print("La palabra que busca eliminar no se encuentró, inténtalo nuevamente. ")
                 del_evaluations()
